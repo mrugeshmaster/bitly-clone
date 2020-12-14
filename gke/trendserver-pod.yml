@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: trendserver-pod
+  namespace: bitly
+  labels:
+    name: trendserver-pod
+spec:
+  containers:
+  - name: trendserver-pod
+    image: mrugeshmaster/trendserver:gcp
+    imagePullPolicy: Always
+    env:
+      - name: cache_server
+        value: "10.142.0.11:9090"
+      - name: rabbitmq_server
+        value: rabbitmq-1-rabbitmq-svc
+      - name: rabbitmq_port
+        value: "5672"
+      - name: rabbitmq_user
+        value: rabbit
+      - name: rabbitmq_pass
+        value: aBJ3VXVaNG3V

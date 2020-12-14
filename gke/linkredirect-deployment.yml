@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linkredirect-deployment
+  namespace: bitly
+spec:
+  selector:
+    matchLabels:
+      name: linkredirect
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: linkredirect
+    spec:
+      containers:
+      - name: linkredirect
+        image: mrugeshmaster/linkredirect:gcp
+        env:
+        - name: gateway
+          value: "104.197.134.107:8000"
+        - name: rabbitmq_server
+          value: rabbitmq-1-rabbitmq-svc
+        - name: rabbitmq_port
+          value: "5672"
+        - name: rabbitmq_user
+          value: rabbit
+        - name: rabbitmq_pass
+          value: aBJ3VXVaNG3V
+        - name: mysql_server
+          value: "10.168.0.7"
+        - name: cache_server
+          value: "10.142.0.11:9090"
+        ports:
+        - containerPort: 6060

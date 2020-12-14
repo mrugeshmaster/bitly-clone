@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database-deployment
+  namespace: bitly
+spec:
+  selector:
+    matchLabels:
+      name: database-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: database-deployment
+    spec:
+      containers:
+      - name: database-deployment
+        image: mrugeshmaster/database:gcp
+        imagePullPolicy: Always
+        env:
+        - name: mysql_server
+          value: "10.168.0.7"
+        - name: rabbitmq_server
+          value: rabbitmq-1-rabbitmq-svc
+        - name: rabbitmq_port
+          value: "5672"
+        - name: rabbitmq_user
+          value: rabbit
+        - name: rabbitmq_pass
+          value: aBJ3VXVaNG3V

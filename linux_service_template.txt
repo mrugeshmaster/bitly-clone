@@ -1,0 +1,11 @@
+[Unit]
+Description=ServiceName
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=/path/to/bin/servicename
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+curl -X POST -d '{"url":"https://codechef.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://leetcode.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://turnitin.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://rediffmail.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://yahoo.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://makemytrip.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://medium.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://instacart.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://ebay.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://microsoft.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://google.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://hackerearth.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://amazon.com/"}' localhost:6060/createshortlink
+curl -X POST -d '{"url":"https://golang.org/pkg/database/sql"}' internal-cp-app-elb-692763257.us-west-2.elb.amazonaws.com:6060/createshortlink
